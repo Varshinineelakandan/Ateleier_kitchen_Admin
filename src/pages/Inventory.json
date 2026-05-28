@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "item_name": "Basmati Rice",
+    "category": "Grains",
+    "quantity": 120,
+    "unit": "kg",
+    "supplier": "Sri Balaji Traders",
+    "status": "In Stock",
+    "last_updated": "2026-05-14"
+  },
+  {
+    "id": 2,
+    "item_name": "Wheat Flour",
+    "category": "Grains",
+    "quantity": 18,
+    "unit": "kg",
+    "supplier": "Sri Balaji Traders",
+    "status": "Low Stock",
+    "last_updated": "2026-05-13"
+  },
+  {
+    "id": 3,
+    "item_name": "Chickpea Flour",
+    "category": "Grains",
+    "quantity": 0,
+    "unit": "kg",
+    "supplier": "Sri Balaji Traders",
+    "status": "Out of Stock",
+    "last_updated": "2026-05-12"
+  },
+  {
+    "id": 4,
+    "item_name": "Whole Wheat Atta",
+    "category": "Grains",
+    "quantity": 35,
+    "unit": "kg",
+    "supplier": "Sri Balaji Traders",
+    "status": "In Stock",
+    "last_updated": "2026-05-14"
+  },
+  {
+    "id": 5,
+    "item_name": "Semolina (Rava)",
+    "category": "Grains",
+    "quantity": 22,
+    "unit": "kg",
+    "supplier": "Sri Balaji Traders",
+    "status": "In Stock",
+    "last_updated": "2026-05-11"
+  },
+  {
+    "id": 6,
+    "item_name": "Chicken Boneless",
+    "category": "Meat",
+    "quantity": 20,
+    "unit": "kg",
+    "supplier": "Fresh Farm Poultry",
+    "status": "In Stock",
+    "last_updated": "2026-05-14"
+  },
+  {
+    "id": 7,
+    "item_name": "Chicken With Bone",
+    "category": "Meat",
+    "quantity": 12,
+    "unit": "kg",
+    "supplier": "Fresh Farm Poultry",
+    "status": "Low Stock",
+    "last_updated": "2026-05-14"
+  },
+  {
+    "id": 8,
+    "item_name": "Mutton",
+    "category": "Meat",
+    "quantity": 0,
+    "unit": "kg",
+    "supplier": "Fresh Farm Poultry",
+    "status": "Out of Stock",
+    "last_updated": "2026-05-13"
+  },
+  {
+    "id": 9,
+    "item_name": "Eggs",
+    "category": "Meat",
+    "quantity": 90,
+    "unit": "pcs",
+    "supplier": "Fresh Farm Poultry",
+    "status": "In Stock",
+    "last_updated": "2026-05-14"
+  },
+  {
+    "id": 10,
+    "item_name": "Sunflower Oil",
+    "category": "Oil",
+    "quantity": 0,
+    "unit": "litre",
+    "supplier": "Sun Oils",
+    "status": "Out of Stock",
+    "last_updated": "2026-05-12"
+  },
+  {
+    "id": 11,
+    "item_name": "Mustard Oil",
+    "category": "Oil",
+    "quantity": 10,
+    "unit": "litre",
+    "supplier": "Sun Oils",
+    "status": "In Stock",
+    "last_updated": "2026-05-13"
+  },
+  {
+    "id": 12,
+    "item_name": "Ghee",
+    "category": "Oil",
+    "quantity": 6,
+    "unit": "litre",
+    "supplier": "Nandini Dairy",
+    "status": "Low Stock",
+    "last_updated": "2026-05-13"
+  },
+  {
+    "id": 13,
+    "item_name": "Paneer",
+    "category": "Dairy",
+    "quantity": 30,
+    "unit": "kg",
+    "supplier": "Aavin",
+    "status": "In Stock",
+    "last_updated": "2026-05-14"
+  },
+  {
+    "id": 14,
+    "item_name": "Full Cream Milk",
+    "category": "Dairy",
+    "quantity": 40,
+    "unit": "litre",
+    "supplier": "Aavin",
+    "status": "In Stock",
+    "last_updated": "2026-05-14"
+  },
+  {
+    "id": 15,
+    "item_name": "Fresh Cream",
+    "category": "Dairy",
+    "quantity": 5,
+    "unit": "litre",
+    "supplier": "Aavin",
+    "status": "Low Stock",
+    "last_updated": "2026-05-13"
+  },
+  {
+    "id": 16,
+    "item_name": "Butter",
+    "category": "Dairy",
+    "quantity": 8,
+    "unit": "kg",
+    "supplier": "Aavin",
+    "status": "In Stock",
+    "last_updated": "2026-05-14"
+  },
+  {
+    "id": 17,
+    "item_name": "Curd",
+    "category": "Dairy",
+    "quantity": 0,
+    "unit": "kg",
+    "supplier": "Aavin",
+    "status": "Out of Stock",
+    "last_updated": "2026-05-12"
+  },
+  {
+    "id": 18,
+    "item_name": "Tomato",
+    "category": "Vegetables",
+    "quantity": 10,
+    "unit": "kg",
+    "supplier": "Local Market",
+    "status": "Low Stock",
+    "last_updated": "2026-05-14"
+  },
+  {
+    "id": 19,
+    "item_name": "Onion",
+    "category": "Vegetables",
+    "quantity": 35,
+    "unit": "kg",
+    "supplier": "Local Market",
+    "status": "In Stock",
+    "last_updated": "2026-05-14"
+  },
+  {
+    "id": 20,
+    "item_name": "Potato",
+    "category": "Vegetables",
+    "quantity": 28,
+    "unit": "kg",
+    "supplier": "Local Market",
+    "status": "In Stock",
+    "last_updated": "2026-05-13"
+  },
+  {
+    "id": 21,
+    "item_name": "Capsicum",
+    "category": "Vegetables",
+    "quantity": 6,
+    "unit": "kg",
+    "supplier": "Local Market",
+    "status": "Low Stock",
+    "last_updated": "2026-05-13"
+  },
+  {
+    "id": 22,
+    "item_name": "Spinach",
+    "category": "Vegetables",
+    "quantity": 0,
+    "unit": "kg",
+    "supplier": "Local Market",
+    "status": "Out of Stock",
+    "last_updated": "2026-05-11"
+  },
+  {
+    "id": 23,
+    "item_name": "Garlic",
+    "category": "Vegetables",
+    "quantity": 7,
+    "unit": "kg",
+    "supplier": "Local Market",
+    "status": "In Stock",
+    "last_updated": "2026-05-12"
+  },
+  {
+    "id": 24,
+    "item_name": "Ginger",
+    "category": "Vegetables",
+    "quantity": 5,
+    "unit": "kg",
+    "supplier": "Local Market",
+    "status": "In Stock",
+    "last_updated": "2026-05-12"
+  },
+  {
+    "id": 25,
+    "item_name": "Red Chilli Powder",
+    "category": "Spices",
+    "quantity": 6,
+    "unit": "kg",
+    "supplier": "Aachi Masala",
+    "status": "In Stock",
+    "last_updated": "2026-05-10"
+  },
+  {
+    "id": 26,
+    "item_name": "Turmeric Powder",
+    "category": "Spices",
+    "quantity": 4,
+    "unit": "kg",
+    "supplier": "Aachi Masala",
+    "status": "In Stock",
+    "last_updated": "2026-05-10"
+  },
+  {
+    "id": 27,
+    "item_name": "Garam Masala",
+    "category": "Spices",
+    "quantity": 2,
+    "unit": "kg",
+    "supplier": "Aachi Masala",
+    "status": "Low Stock",
+    "last_updated": "2026-05-09"
+  },
+  {
+    "id": 28,
+    "item_name": "Cumin Seeds",
+    "category": "Spices",
+    "quantity": 3,
+    "unit": "kg",
+    "supplier": "Aachi Masala",
+    "status": "In Stock",
+    "last_updated": "2026-05-10"
+  },
+  {
+    "id": 29,
+    "item_name": "Coriander Powder",
+    "category": "Spices",
+    "quantity": 0,
+    "unit": "kg",
+    "supplier": "Aachi Masala",
+    "status": "Out of Stock",
+    "last_updated": "2026-05-08"
+  },
+  {
+    "id": 30,
+    "item_name": "Tandoori Masala",
+    "category": "Spices",
+    "quantity": 1,
+    "unit": "kg",
+    "supplier": "Aachi Masala",
+    "status": "Low Stock",
+    "last_updated": "2026-05-08"
+  },
+  {
+    "id": 31,
+    "item_name": "Mineral Water Bottles",
+    "category": "Beverages",
+    "quantity": 48,
+    "unit": "pcs",
+    "supplier": "Bisleri Distributors",
+    "status": "In Stock",
+    "last_updated": "2026-05-14"
+  },
+  {
+    "id": 32,
+    "item_name": "Soft Drinks Assorted",
+    "category": "Beverages",
+    "quantity": 24,
+    "unit": "pcs",
+    "supplier": "Bisleri Distributors",
+    "status": "In Stock",
+    "last_updated": "2026-05-13"
+  },
+  {
+    "id": 33,
+    "item_name": "Masala Chai Premix",
+    "category": "Beverages",
+    "quantity": 4,
+    "unit": "kg",
+    "supplier": "Bisleri Distributors",
+    "status": "Low Stock",
+    "last_updated": "2026-05-12"
+  },
+  {
+    "id": 34,
+    "item_name": "Fresh Mango Pulp",
+    "category": "Beverages",
+    "quantity": 0,
+    "unit": "litre",
+    "supplier": "Bisleri Distributors",
+    "status": "Out of Stock",
+    "last_updated": "2026-05-11"
+  },
+  {
+    "id": 35,
+    "item_name": "Lemon Juice Concentrate",
+    "category": "Beverages",
+    "quantity": 8,
+    "unit": "litre",
+    "supplier": "Bisleri Distributors",
+    "status": "In Stock",
+    "last_updated": "2026-05-13"
+  },
+  {
+    "id": 36,
+    "item_name": "Tissue Papers",
+    "category": "Packaging",
+    "quantity": 20,
+    "unit": "packets",
+    "supplier": "Chennai Packaging Co.",
+    "status": "In Stock",
+    "last_updated": "2026-05-10"
+  },
+  {
+    "id": 37,
+    "item_name": "Takeaway Boxes",
+    "category": "Packaging",
+    "quantity": 8,
+    "unit": "packets",
+    "supplier": "Chennai Packaging Co.",
+    "status": "Low Stock",
+    "last_updated": "2026-05-11"
+  },
+  {
+    "id": 38,
+    "item_name": "Disposable Cups",
+    "category": "Packaging",
+    "quantity": 15,
+    "unit": "packets",
+    "supplier": "Chennai Packaging Co.",
+    "status": "In Stock",
+    "last_updated": "2026-05-10"
+  },
+  {
+    "id": 39,
+    "item_name": "Aluminium Foil Roll",
+    "category": "Packaging",
+    "quantity": 0,
+    "unit": "packets",
+    "supplier": "Chennai Packaging Co.",
+    "status": "Out of Stock",
+    "last_updated": "2026-05-09"
+  },
+  {
+    "id": 40,
+    "item_name": "Disposable Gloves",
+    "category": "Packaging",
+    "quantity": 10,
+    "unit": "packets",
+    "supplier": "Chennai Packaging Co.",
+    "status": "In Stock",
+    "last_updated": "2026-05-12"
+  }
+]

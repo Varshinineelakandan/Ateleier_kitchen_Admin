@@ -1,0 +1,263 @@
+:root{
+  --cream:#F8F1EB;
+  --sand:#EAD7C5;
+  --spice:#B35C1E;
+  --amber:#C97A40;
+  --dark:#2C1A0E;
+  --light:#9E7455;
+  --white:#ffffff;
+}
+
+.page{
+  margin-left:260px;
+  min-height:100vh;
+  padding:30px;
+  background:linear-gradient(135deg,#fff,var(--cream));
+}
+
+.page h1{
+  font-size:30px;
+  font-weight:800;
+  color:var(--dark);
+  margin-bottom:25px;
+  position:relative;
+}
+
+.page h1::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-8px;
+  width:120px;
+  height:4px;
+  border-radius:10px;
+  background:linear-gradient(to right,var(--spice),var(--amber));
+}
+
+.orders-grids{
+  display:grid;
+  grid-template-columns:repeat(3,300px);
+  justify-content:center;
+  gap:20px;
+}
+
+.order-cards {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 18px;
+  border: 1px solid rgba(179, 92, 30, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: 0.4s ease;
+  position: relative;
+  /* overflow: hidden; */  /* ❌ REMOVE THIS LINE */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fix 2: Add pointer-events none to the overlay so it doesn't block clicks */
+.order-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(179, 92, 30, 0.15), transparent 60%);
+  opacity: 0;
+  transition: 0.4s;
+  pointer-events: none;  /* ✅ ADD THIS — lets clicks pass through the overlay */
+}
+
+/* Fix 3: Make sure button is above the overlay */
+.remove-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--spice);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+  align-self: flex-end;
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.15);
+  position: relative;  /* ✅ ADD THIS */
+  z-index: 10;         /* ✅ ADD THIS */
+}
+.order-card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 18px 45px rgba(179,92,30,0.18);
+}
+
+.order-card:hover::before{
+  opacity:1;
+}
+
+.tops{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.tops h3{
+  font-size:18px;
+  color:var(--dark);
+  font-weight:700;
+}
+
+.badges{
+  padding:6px 10px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:700;
+  background:linear-gradient(135deg,var(--spice),var(--amber));
+  color:white;
+  box-shadow:0 5px 15px rgba(179,92,30,0.25);
+}
+
+.items{
+  margin:10px 0;
+  padding:10px;
+  border-radius:12px;
+  background:rgba(234,215,197,0.25);
+  flex-grow:1;
+}
+
+.items p{
+  margin:4px 0;
+  font-size:14px;
+  color:var(--dark);
+  font-weight:500;
+}
+
+.bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:12px;
+}
+
+.bottom h2{
+  color:var(--spice);
+  font-size:20px;
+  font-weight:800;
+}
+
+.bottom p{
+  font-size:12px;
+  color:var(--light);
+}
+
+.page-logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.page-logo img{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  object-fit:cover;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  animation:pulse 2.5s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.05);}
+  100%{transform:scale(1);}
+}
+
+@media screen and (max-width: 576px){
+
+  .page{
+    margin-left:0;
+    padding:15px;
+  }
+
+  .page h1{
+    font-size:24px;
+    text-align:center;
+  }
+
+  .page h1::after{
+    left:50%;
+    transform:translateX(-50%);
+    width:90px;
+  }
+
+  .page-logo{
+    justify-content:center;
+    text-align:center;
+  }
+
+  .page-logo img{
+    width:38px;
+    height:38px;
+  }
+
+  .orders-grids{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .order-cards{
+    width:100%;
+    padding:15px;
+  }
+
+  .tops{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+
+  .tops h3{
+    font-size:16px;
+  }
+
+  .badges{
+    font-size:11px;
+    padding:5px 10px;
+  }
+
+  .items{
+    padding:10px;
+  }
+
+  .items p{
+    font-size:13px;
+  }
+
+  .bottom{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+  }
+
+  .bottom h2{
+    font-size:18px;
+  }
+
+  .bottom p{
+    font-size:11px;
+  }
+
+  .remove-btn{
+    width:100%;
+    text-align:center;
+    padding:10px;
+    font-size:13px;
+  }
+
+}
+
+
+
+.remove-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 12px 25px rgba(255,0,0,0.25);
+}

@@ -1,0 +1,424 @@
+:root {
+  --cream: #F8F1EB;
+  --sand:  #EAD7C5;
+  --spice: #B35C1E;
+  --amber: #C97A40;
+  --rust:  #A94E1A;
+  --dark:  #2C1A0E;
+  --light: #9E7455;
+  --white: #ffffff;
+}
+
+/* ── PAGE ──────────────────────────────────────────── */
+
+.reports-page {
+  margin-left: 260px;
+  min-height: 100vh;
+  padding: 40px 40px 80px;
+  background: var(--cream);
+}
+
+/* ── HEADER ────────────────────────────────────────── */
+
+.reports-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.reports-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reports-eyebrow {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--light);
+}
+
+.reports-title {
+  font-size: 38px;
+  font-weight: 900;
+  color: var(--dark);
+  letter-spacing: -1.5px;
+  line-height: 1;
+  display: inline-block;
+  position: relative;
+}
+
+.reports-title::after { display: none; }
+
+.reports-date-pill {
+  background: var(--dark);
+  color: var(--sand);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 9px 18px;
+  border-radius: 99px;
+  align-self: flex-end;
+}
+
+/* ── STAT CARDS ────────────────────────────────────── */
+
+.report-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.report-card {
+  border-radius: 22px;
+  padding: 26px 24px 22px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: none;
+  cursor: default;
+}
+
+.report-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(44, 26, 14, 0.18);
+}
+
+/* Kill original ::before stripe */
+.report-card::before { display: none; }
+
+/* Watermark numeral */
+.report-card::after {
+  content: attr(data-watermark);
+  position: absolute;
+  right: -4px;
+  bottom: -14px;
+  font-size: 88px;
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0.10;
+  pointer-events: none;
+  color: inherit;
+}
+
+.report-card h3 {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  opacity: 0.68;
+}
+
+.report-card h2 {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  line-height: 1;
+}
+
+.report-card .card-trend {
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 10px;
+  opacity: 0.65;
+  letter-spacing: 0.5px;
+}
+
+/* Card themes */
+.revenue-card   { background: var(--spice); color: var(--white); }
+.order-card     { background: var(--dark);  color: var(--cream); }
+.delivered-card { background: var(--amber); color: var(--white); }
+.pending-card   { background: var(--sand);  color: var(--dark);  }
+.pending-card h3 { opacity: 1; color: var(--light); }
+.pending-card .card-trend { color: var(--light); opacity: 1; }
+
+/* ── SECTION LABEL ─────────────────────────────────── */
+
+.section-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--light);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--dark);
+  letter-spacing: -0.5px;
+  margin-bottom: 22px;
+  display: block;
+}
+
+/* ── WHITE PANEL (shared) ──────────────────────────── */
+
+.chart-box,
+.top-items-box {
+  background: var(--white);
+  border-radius: 22px;
+  padding: 28px 30px;
+  border: 1.5px solid var(--sand);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.chart-box:hover,
+.top-items-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(44, 26, 14, 0.10);
+}
+
+.chart-box {
+  margin-bottom: 20px;
+}
+
+/* Chart box heading */
+.chart-box h2 {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--light);
+  margin-bottom: 4px;
+}
+
+/* ── PAYMENT SUMMARY ───────────────────────────────── */
+
+.payment-summary {
+  display: flex;
+  gap: 14px;
+}
+
+.payment-card {
+  flex: 1;
+  border-radius: 22px;
+  padding: 28px 26px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  border: none;
+}
+
+.payment-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 18px 40px rgba(44, 26, 14, 0.20);
+}
+
+.payment-card::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  top: -55px;
+  right: -45px;
+  background: rgba(255, 255, 255, 0.09);
+  pointer-events: none;
+}
+
+.payment-card h3 {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 12px;
+}
+
+.payment-card h1 {
+  font-size: 38px;
+  font-weight: 900;
+  color: var(--white);
+  letter-spacing: -1.5px;
+  line-height: 1;
+}
+
+.payment-card .pay-badge {
+  display: inline-block;
+  margin-top: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 99px;
+}
+
+.online-payment { background: var(--rust); }
+.cod-payment    { background: var(--dark); }
+
+/* ── TOP ITEMS TABLE ───────────────────────────────── */
+
+.top-items-box h2 {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--light);
+  margin-bottom: 4px;
+}
+
+.top-items-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.top-items-table th {
+  background: transparent;
+  color: var(--light);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0 0 14px;
+  text-align: left;
+  border-bottom: 1.5px solid var(--sand);
+  border-radius: 0;
+}
+
+.top-items-table td {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--sand);
+  color: var(--dark);
+  font-size: 14px;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.top-items-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.top-items-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.top-items-table tbody tr:hover td {
+  background: var(--cream);
+  padding-left: 6px;
+}
+
+.dish-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rank-badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.rank-1 { background: var(--spice); color: var(--white); }
+.rank-2 { background: var(--amber); color: var(--white); }
+.rank-3 { background: var(--light); color: var(--white); }
+.rank-4,
+.rank-5 { background: var(--sand);  color: var(--dark);  }
+
+.qty-cell { text-align: right; }
+
+.qty-number {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--dark);
+  letter-spacing: -0.5px;
+}
+
+.qty-bar {
+  height: 5px;
+  border-radius: 99px;
+  background: var(--sand);
+  margin-top: 5px;
+  min-width: 100px;
+  overflow: hidden;
+}
+
+.qty-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--spice), var(--amber));
+  transition: width 0.6s ease;
+}
+
+/* ── RECHARTS ──────────────────────────────────────── */
+
+.recharts-cartesian-grid line {
+  stroke: var(--sand);
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: var(--light);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.recharts-legend-item-text {
+  color: var(--dark) !important;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.recharts-default-tooltip {
+  border: 1.5px solid var(--sand) !important;
+  border-radius: 14px !important;
+  background: var(--white) !important;
+  box-shadow: 0 8px 28px rgba(44, 26, 14, 0.14) !important;
+  color: var(--dark) !important;
+}
+
+/* ── RESPONSIVE ────────────────────────────────────── */
+
+@media (max-width: 1200px) {
+  .report-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .reports-page {
+    margin-left: 0;
+    padding: 20px 16px 60px;
+  }
+
+  .reports-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .report-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .payment-summary {
+    flex-direction: column;
+  }
+
+  .chart-box,
+  .top-items-box {
+    padding: 22px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .report-cards {
+    grid-template-columns: 1fr;
+  }
+}

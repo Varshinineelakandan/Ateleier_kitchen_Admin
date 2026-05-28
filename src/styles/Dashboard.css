@@ -1,0 +1,229 @@
+:root{
+  --cream:#F8F1EB;
+  --sand:#EAD7C5;
+  --spice:#B35C1E;
+  --amber:#C97A40;
+  --rust:#A94E1A;
+  --dark:#2C1A0E;
+  --light:#9E7455;
+  --white:#ffffff;
+}
+
+.dashboard-page{
+  margin-left:260px;
+  min-height:100vh;
+  padding:30px;
+  background:
+  radial-gradient(circle at top left, rgba(179,92,30,0.15), transparent 30%),
+  radial-gradient(circle at bottom right, rgba(201,122,64,0.18), transparent 30%),
+  linear-gradient(135deg,#fff,#f8f1eb);
+  overflow:hidden;
+  position:relative;
+}
+
+.dashboard-page h1{
+  font-size:34px;
+  font-weight:800;
+  color:var(--dark);
+  margin-bottom:28px;
+  letter-spacing:1px;
+  position:relative;
+  display:inline-block;
+}
+
+.dashboard-page h1::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-8px;
+  width:70%;
+  height:5px;
+  border-radius:20px;
+  background:linear-gradient(to right,var(--spice),var(--amber));
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+  margin-bottom:28px;
+}
+
+.card{
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,0.4);
+  border-radius:24px;
+  padding:22px;
+  position:relative;
+  overflow:hidden;
+  transition:0.45s ease;
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.06),
+  inset 0 1px 1px rgba(255,255,255,0.6);
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  background:radial-gradient(circle,var(--spice),transparent 70%);
+  top:-90px;
+  right:-90px;
+  opacity:0;
+  transition:0.5s;
+}
+
+.card:hover::before{
+  opacity:0.18;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:
+  0 20px 45px rgba(179,92,30,0.18),
+  inset 0 1px 1px rgba(255,255,255,0.6);
+}
+
+.card h3{
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:var(--light);
+  margin-bottom:14px;
+}
+
+.card h2{
+  font-size:34px;
+  font-weight:800;
+  color:var(--dark);
+  transition:0.4s;
+}
+
+.card:hover h2{
+  color:var(--spice);
+}
+
+.charts{
+  display:grid;
+  grid-template-columns:1.6fr 1fr;
+  gap:22px;
+}
+
+.chart-card{
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(18px);
+  border-radius:24px;
+  padding:24px;
+  position:relative;
+  overflow:hidden;
+  transition:0.45s ease;
+  border:1px solid rgba(255,255,255,0.4);
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.06),
+  inset 0 1px 1px rgba(255,255,255,0.6);
+}
+
+.chart-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(179,92,30,0.12),transparent);
+  opacity:0;
+  transition:0.4s;
+}
+
+.chart-card:hover::before{
+  opacity:1;
+}
+
+.chart-card:hover{
+  transform:translateY(-8px);
+  box-shadow:
+  0 20px 45px rgba(179,92,30,0.18),
+  inset 0 1px 1px rgba(255,255,255,0.6);
+}
+
+.chart-card h3{
+  color:var(--dark);
+  margin-bottom:18px;
+  font-size:17px;
+  font-weight:700;
+}
+
+.insights{
+  margin-top:26px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.insight-card{
+  padding:18px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#fff,#f8f1eb);
+  border:1px solid rgba(179,92,30,0.12);
+  color:var(--dark);
+  font-weight:600;
+  position:relative;
+  overflow:hidden;
+  transition:0.4s ease;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.insight-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(179,92,30,0.15),transparent);
+  opacity:0;
+  transition:0.4s;
+}
+
+.insight-card:hover::before{
+  opacity:1;
+}
+
+.insight-card:hover{
+  transform:translateY(-6px) scale(1.02);
+  box-shadow:0 18px 40px rgba(179,92,30,0.15);
+}
+
+.recharts-cartesian-axis-tick-value{
+  fill:var(--light);
+  font-size:12px;
+  font-weight:600;
+}
+
+.recharts-default-tooltip{
+  border:none !important;
+  border-radius:14px !important;
+  background:#fff !important;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+@media(max-width:1200px){
+  .cards{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .charts{
+    grid-template-columns:1fr;
+  }
+
+  .insights{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:768px){
+  .dashboard-page{
+    margin-left:0;
+    padding:18px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+}
