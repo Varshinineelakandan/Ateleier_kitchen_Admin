@@ -1,11 +1,10 @@
-import { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/Sidebar.css";
 import logo from "../components/logo.png";
 import admin from "../components/logo.png";
 
 import {
-  FaBars,
   FaHome,
   FaUtensils,
   FaTable,
