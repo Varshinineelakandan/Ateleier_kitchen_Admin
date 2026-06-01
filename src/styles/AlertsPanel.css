@@ -1,0 +1,87 @@
+/* ─── AlertsPanel.css ───────────────────────────────────────────────────── */
+
+.alerts-panel {
+  background: rgba(179, 92, 30, 0.05);
+  border: 1px solid rgba(179, 92, 30, 0.12);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(14px);
+}
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.alerts-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.alerts-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.alerts-list::-webkit-scrollbar-thumb {
+  background: rgba(179, 92, 30, 0.16);
+  border-radius: 999px;
+}
+
+.alert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  border: 1px solid transparent;
+}
+
+.alert-item.warning {
+  background: rgba(179, 92, 30, 0.08);
+  border-color: rgba(179, 92, 30, 0.15);
+}
+
+.alert-item.error {
+  background: rgba(169, 78, 26, 0.08);
+  border-color: rgba(169, 78, 26, 0.18);
+}
+
+.alert-item.info {
+  background: rgba(139, 111, 94, 0.08);
+  border-color: rgba(139, 111, 94, 0.15);
+}
+
+.alert-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.alert-item.warning .alert-icon { color: #C97A40; }
+.alert-item.error   .alert-icon { color: #C26040; }
+.alert-item.info    .alert-icon { color: #8B6F5E; }
+
+.alert-msg {
+  color: rgba(44, 26, 14, 0.72);
+  line-height: 1.4;
+  flex: 1;
+}
+
+.alert-id {
+  font-size: 0.68rem;
+  font-family: "Courier New", monospace;
+  opacity: 0.45;
+  display: block;
+  margin-top: 2px;
+}
+
+.no-alerts {
+  text-align: center;
+  padding: 2.5rem 0;
+  color: rgba(179, 92, 30, 0.3);
+  font-size: 0.85rem;
+}

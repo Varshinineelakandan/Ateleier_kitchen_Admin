@@ -1,0 +1,128 @@
+/* ─── RevenueChart.css ─────────────────────────────────────────────────── */
+
+.chart-card {
+  background: rgba(179, 92, 30, 0.05);
+  border: 1px solid rgba(179, 92, 30, 0.12);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(14px);
+}
+
+.chart-card + .chart-card {
+  margin-top: 1.25rem;
+}
+
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chart-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2C1A0E;
+}
+
+.chart-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(179, 92, 30, 0.15);
+  color: #B35C1E;
+  border: 1px solid rgba(179, 92, 30, 0.22);
+}
+
+.revenue-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .revenue-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.monthly-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.monthly-table th {
+  color: rgba(44, 26, 14, 0.4);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-bottom: 1px solid rgba(179, 92, 30, 0.09);
+  text-align: left;
+}
+
+.monthly-table td {
+  padding: 8px 10px;
+  color: rgba(44, 26, 14, 0.75);
+  border-bottom: 1px solid rgba(179, 92, 30, 0.05);
+}
+
+.monthly-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.highlight-row td {
+  color: #B35C1E;
+  font-weight: 600;
+}
+
+.day-highlight-box {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.day-box {
+  flex: 1;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(179, 92, 30, 0.09);
+}
+
+.day-box.highest {
+  background: rgba(90, 138, 60, 0.08);
+  border-color: rgba(90, 138, 60, 0.2);
+}
+
+.day-box.lowest {
+  background: rgba(169, 78, 26, 0.08);
+  border-color: rgba(169, 78, 26, 0.2);
+}
+
+.day-box-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(44, 26, 14, 0.4);
+  margin-bottom: 4px;
+}
+
+.day-box-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2C1A0E;
+  margin-bottom: 2px;
+}
+
+.day-box-val {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.day-box.highest .day-box-val { color: #5A8A3C; }
+.day-box.lowest  .day-box-val { color: #A94E1A; }

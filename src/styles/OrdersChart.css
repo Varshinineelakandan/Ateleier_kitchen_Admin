@@ -1,0 +1,72 @@
+/* ─── OrdersChart.css ──────────────────────────────────────────────────── */
+
+.orders-chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 860px) {
+  .orders-chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.completion-ring-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+.completion-rate-val {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #5A8A3C;
+  line-height: 1;
+}
+
+.completion-rate-label {
+  font-size: 0.78rem;
+  color: rgba(44, 26, 14, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.pv-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.7rem;
+}
+
+.pv-label {
+  width: 80px;
+  font-size: 0.78rem;
+  color: rgba(44, 26, 14, 0.5);
+  flex-shrink: 0;
+}
+
+.pv-bar-bg {
+  flex: 1;
+  height: 10px;
+  background: rgba(179, 92, 30, 0.09);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.pv-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 1s ease;
+}
+
+.pv-count {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #2C1A0E;
+  width: 30px;
+  text-align: right;
+}

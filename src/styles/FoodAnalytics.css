@@ -1,0 +1,58 @@
+/* ─── FoodAnalytics.css ─────────────────────────────────────────────────── */
+
+.food-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 860px) {
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.food-highlight-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.food-highlight {
+  flex: 1;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(179, 92, 30, 0.09);
+}
+
+.food-highlight.best {
+  background: rgba(90, 138, 60, 0.08);
+  border-color: rgba(90, 138, 60, 0.2);
+}
+
+.food-highlight.worst {
+  background: rgba(169, 78, 26, 0.08);
+  border-color: rgba(169, 78, 26, 0.2);
+}
+
+.food-hl-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: rgba(44, 26, 14, 0.4);
+  margin-bottom: 4px;
+}
+
+.food-hl-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2C1A0E;
+}
+
+.food-hl-qty {
+  font-size: 0.78rem;
+  margin-top: 2px;
+}
+
+.food-highlight.best  .food-hl-qty { color: #5A8A3C; }
+.food-highlight.worst .food-hl-qty { color: #A94E1A; }
