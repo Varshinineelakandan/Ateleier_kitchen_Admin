@@ -2,7 +2,7 @@
 import React from "react";
 import {
   ResponsiveContainer, AreaChart, Area, BarChart, Bar,
-  XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+  XAxis, YAxis, CartesianGrid, Tooltip,
 } from "recharts";
 import { motion } from "framer-motion";
 import {

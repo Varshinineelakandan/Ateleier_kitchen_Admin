@@ -2,7 +2,7 @@
 // Pure helper functions – no hardcoded values, fully driven by API data.
 // ──────────────────────────────────────────────────────────────────────────
 
-import { format, parseISO, isToday, startOfDay } from "date-fns";
+import { format, parseISO, isToday } from "date-fns";
 
 // ── Overview Stats ────────────────────────────────────────────────────────
 export const getOverviewStats = (orders = []) => {

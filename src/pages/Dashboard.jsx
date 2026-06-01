@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   FiRefreshCw, FiMenu, FiX,
   FiBarChart2, FiShoppingBag, FiDollarSign,
-  FiPieChart, FiGrid, FiAlertCircle, FiList, FiStar,
+   FiGrid, FiAlertCircle, FiList, FiStar,
   FiCreditCard, FiSun,
 } from "react-icons/fi";
 
